@@ -13,8 +13,10 @@ import androidx.annotation.Nullable;
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
-public class CustomList extends ArrayAdapter<City> {
+public class CustomList extends ArrayAdapter<City> implements Comparable{
 
     private ArrayList<City> cities;
     private Context context;
@@ -48,12 +50,36 @@ public class CustomList extends ArrayAdapter<City> {
 
     }
 
+    @Override
+    public int compareTo(Object o) {
+        return 0;
+    }
+
     public int getCount(){
         return cities.size();
     }
 
     public void addCity(City city){
+        if(cities.contains(city)) {
+            throw new IllegalArgumentException();
+        }
         cities.add(city);
 //        return;
     }
+
+    public boolean hasCity(City city){
+//        List<City> list = cities;
+//        Collections.sort(list);
+//        return list.contains(city);
+        return false;
+    }
+
+    public void delete(City city){
+//        if(!cities.contains(city)){
+//            throw new IllegalArgumentException();
+//        }
+//        cities.remove(city);
+        return;
+    }
+
 }
