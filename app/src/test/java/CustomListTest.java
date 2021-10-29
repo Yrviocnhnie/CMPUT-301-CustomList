@@ -42,7 +42,6 @@ public class CustomListTest {
 
         list.delete(c1);
         assertFalse(list.hasCity(c1));
-
     }
 
 }
