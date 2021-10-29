@@ -75,11 +75,11 @@ public class CustomList extends ArrayAdapter<City> implements Comparable{
     }
 
     public void delete(City city){
-//        if(!cities.contains(city)){
-//            throw new IllegalArgumentException();
-//        }
-//        cities.remove(city);
-        return;
+        if(!cities.contains(city)){
+            throw new IllegalArgumentException();
+        }
+        cities.remove(city);
+//        return;
     }
 
 }
