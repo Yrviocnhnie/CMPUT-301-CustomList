@@ -50,6 +50,6 @@ public class CustomListTest {
         list.addCity(c);
         assertEquals(1, list.getCount());
 
-    }
+    }   
 
 }
