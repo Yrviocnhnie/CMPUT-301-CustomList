@@ -56,7 +56,9 @@ public class CustomList extends ArrayAdapter<City> implements Comparable{
     }
 
     public int getCount(){
-        return cities.size();
+
+//        return cities.size();
+        return 0;
     }
 
     public void addCity(City city){
