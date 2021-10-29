@@ -68,10 +68,10 @@ public class CustomList extends ArrayAdapter<City> implements Comparable{
     }
 
     public boolean hasCity(City city){
-//        List<City> list = cities;
-//        Collections.sort(list);
-//        return list.contains(city);
-        return false;
+        List<City> list = cities;
+        Collections.sort(list);
+        return list.contains(city);
+//        return false;
     }
 
     public void delete(City city){
